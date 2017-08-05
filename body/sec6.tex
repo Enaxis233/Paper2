@@ -1,0 +1,63 @@
+\section{Dynamical Localization}
+Now we have established the spectral localization for 1-d Anderson Model. With some more effort, we can get the Dynamical localization.
+We say that $H_\omega$ exhibits dynamical localization property if for $a.e.\omega$, for any $\epsilon>0$, there exists a $\alpha=\alpha(\omega)>0$, a $C=C(\epsilon,\omega)$, such that for all $x,y\in\mathbb{Z}$:
+  \[
+    \sup_t |\langle\delta_x,e^{-itH_{\omega}}\delta_y\rangle|\leq C_\epsilon e^{\epsilon|y|}e^{-\alpha|x-y|}
+  \]
+According to \cite{del1996operators}, we only need to prove that for $a.e.\omega$, $H_\omega$ has SULE(Semi-Uniformly Localized Eigenfunction). We say $H$ has SULE if $H$ has a complete set $\{\varphi_E\}$ of orthonormal eigenfunctions, there is $\alpha>0$, $l=l_E\in\mathbb{Z}$, and for each $\epsilon>0$, a $C_\epsilon$ such that for any eigenvalue $E$,
+  \[
+    |\varphi_E(x)|\leq C_\epsilon e^{\epsilon|l_E|}e^{-\alpha|x-l_E|}
+  \]
+
+For any central point $l\in\mathbb{Z}$, by remark \ref{N1}, \ref{N2}, (We use Quantitative Craig-Simon instead of the original one for estimating $N_2$, $\Omega_2$) remark \ref{N3} for $l$ and $l+2n+1$, and their natural extension to $l-2n-1$ and $l$, (But we keep the original notations, even if now it satisfies both properties.) and the same analysis in section 4, if we let $\Omega(l)=\bigcap_{i=1,2,3}\Omega_i(l)$, then for each
+ $\omega\in\Omega(l)$, there exists $N(l,\omega) =\max\{N_1(l,\omega),N_2(l,\omega),N_3(l,\omega)\}$,
+ such that for any $n>N(l,\omega)$,
+ either $l$ or $l+2n+1$, either $l$ or $l-2n-1$ are $(\mu-8\epsilon_0,n,E,\omega)$-regular for all $E\in \sigma$.
+
+ Take $\Omega'=\bigcap\limits_{l}\Omega_l\cap\bigcap_{i=1,2,3}\Omega_{N_i}$ and fix $\omega\in\Omega'$. (We omit $\omega$ from notations from now on.)
+
+By remark \ref{N1}, remark \ref{N3}, there exists $L_1$, $L_3$ such that for all $|l|>\max\{L_1,L_2,L_3\}$,
+  \[
+    N_i(l)\leq \ln^2 |l|,\quad \forall i=1,2,3
+  \]
+  for all $E$.
+
+Let $l_E$ be the maximum point of $\varphi_E$.
+For any $n\geq N_4:=\frac{\ln 2}{\mu-8\epsilon_0}$, $l_E$ is naturally $(\mu-8\epsilon_0,n,E)$-singular by \eqref{possion}. So there exists $L_4$, for any $|l|>L_4$,
+  \[
+    N_4<\ln^2 |l|
+  \]
+for all $E$.
+
+Let $L=\max\{L_1, L_2, L_3, L_4\}$, $N(l):=\max\{N_1(l),N_2(l),N_3(l),N_4\}$, then for any $|l|>L$,
+\begin{equation}\label{Nl}
+  N(l)\leq \ln^2 |l|
+\end{equation}
+
+If $|l_E|>L$, then for any $|x-l_E|\geq N(l_E)$, $l_E$ is $(\mu-8\epsilon_0,n,E)$-singular, so $x$ is $(\mu-8\epsilon_0,n,E)$-regular. By \eqref{possion}, for any $|x-l_E|\geq N(l_E)$
+  \[
+    |\varphi_E(x)|\leq 2e^{-(\mu-8\epsilon_0)|x-l_E|}
+  \]
+Since $\varphi_E$ is normalized, in fact for all $x$,
+\[
+  |\varphi_E(x)|\leq e^{(\mu-8\epsilon_0)N(l_E)}e^{-(\mu-8\epsilon_0)|x-l_E|}
+\]
+By \eqref{Nl}, for any $\epsilon$, there exists $C_{1\epsilon}$ such that
+\[
+  |\varphi_E(x)|\leq e^{(\mu-8\epsilon_0)\ln^2 |l_E|} e^{-(\mu-8\epsilon_0)|x-l_E|}\leq C_{1\epsilon} e^{\epsilon |l_E|} e^{-(\mu-8\epsilon_0)|x-l_E|}
+\]
+
+If $|l_E|\leq L$, consider all $i\in[-L,L]$, all $|x-i|<N(i)$. For any $\epsilon$, take $M_2=\max\limits_i\{e^{\epsilon i} e^{-(\mu-8\epsilon_0)|x-i|}\}$, $C_{2\epsilon}=M^{-1}$, then for all  $|x-l_E|< N(l_E)$,
+\[
+  |\varphi_E(x)|\leq 1\leq C_2\epsilon e^{\epsilon |l_E|} e^{-(\mu-8\epsilon_0)|x-l_E|}
+\]
+
+As for $|x-l_E|\geq N(l_E)$,
+\[
+  |\varphi_E(x)|\leq e^{-(\mu-8\epsilon_0)|x-l_E|}\leq e^{\epsilon |l_E|}e^{-(\mu-8\epsilon_0)|x-l_E|}
+\]
+
+So  $C_\epsilon=\max\{C_{1\epsilon},C_{2\epsilon},1\}$ would work.
+ % If $l$ is $(\mu-8\epsilon_0,n,E,\omega)$-singular, then $x$ is $(\mu-8\epsilon_0,n,E,\omega)$-regular.
+ %
+ % Let $\varphi_E$ be the normalized eigenfunction of $E$. For any $|x-l|=2n+1$, $n>N_{l,E,\omega}$, $ |\varphi_E(x)|\leq e^{-C|x-l|}$, for some $C=>0$.

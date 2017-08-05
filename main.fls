@@ -1,4 +1,4 @@
-PWD C:/Users/Enaxis/Desktop/Paper2-1.2.4
+PWD C:/Users/Enaxis/Desktop/paper2 v1.2.6
 INPUT C:/Users/Enaxis/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
 INPUT main.tex
 OUTPUT main.log
@@ -78,6 +78,10 @@ INPUT body/sec3.tex
 INPUT body/sec3.tex
 INPUT body/sec4.tex
 INPUT body/sec4.tex
+INPUT body/sec5.tex
+INPUT body/sec5.tex
+INPUT body/sec6.tex
+INPUT body/sec6.tex
 INPUT main.bbl
 INPUT main.bbl
 INPUT C:/Program Files/MiKTeX 2/fonts/tfm/public/cm/cmti8.tfm

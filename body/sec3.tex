@@ -1,4 +1,4 @@
-for every \section{main technique}
+\section{Main Lemmas}
 
 Denote
 \begin{equation}\label{B+}
@@ -47,7 +47,7 @@ Large deviation theorem gives us the estimate that for all $E, a, b,\epsilon$
 P(B_{[a,b],\epsilon,E}^\pm)\leq e^{-\eta(b-a+1)}
 \end{equation}
 
-Assume $\epsilon=\epsilon_0<\frac{1}{8}\nu$ is fixed for now, so we omit it from the notations until Theorem \ref{omega3}. $\eta_0=\eta(\epsilon_0)$ is the corresponding parameter from lemma \ref{ldt}.
+Assume $\epsilon=\epsilon_0<\frac{1}{8}\nu$ is fixed for now, so we omit it from the notations until Lemma \ref{omega3}. $\eta_0=\eta(\epsilon_0)$ is the corresponding parameter from Lemma \ref{ldt lemma}
 \begin{lemma}\label{lemma1}
 For $n \geq 2$, if $x$ is $(\gamma(E)-8\epsilon_0,n,E,\omega)$-singular, then
 \[(E,\omega)\in B_{[x-n,x+n]}^-\cup B_{[x-n,x]}^+\cup B_{[x,x+n]}^+
@@ -87,13 +87,13 @@ Follows imediately from the definition of singularity and \eqref{A}.
 
 % By Theorem \ref{thm2},
 % From lemma \ref{lemma1}, we get our first restriction on $\Omega$ to make the bad sets have small measure.
-Now we will use three theorems to find the proper $\Omega_0$ for Theorem \ref{thm2}.
-\begin{thm}\label{omega1}
-  Let $0<\delta_0<\eta_0$. For a.e. $\omega$ (denote as $\Omega_1$), there exists $ N_1=N_1(\omega)$, such that for every $ n>N_1$,
+Now we will use the following three lemmas to find the proper $\Omega_0$ for Theorem \ref{thm2}.
+\begin{lemma}\label{omega1}
+  Let $0<\delta_0<\eta_0$. For a.e. $\omega$ (we denote this set as $\Omega_1$), there exists $ N_1=N_1(\omega)$, such that for every $ n>N_1$,
   \[
   \max\{m(B_{[n+1,3n+1],\omega}^-),m(B_{[-n,n],\omega}^-)\}\leq e^{-(\eta_0-\delta_0)(2n+1)}
   \]
-\end{thm}
+\end{lemma}
 
 \begin{proof}
   By \eqref{ldt},
@@ -109,16 +109,16 @@ m\times\mathbb{P}(B_{[-n,n]}^-)\leq m(\sigma)e^{-\eta_0(2n+1)}
       \Omega_{\delta_0,n,+}=\left\{\omega:m(B_{[n+1,3n+1],\omega}^-)\leq e^{-(\eta_0-\delta_0)(2n+1)}\right\}
     \]
     \[
-    \Omega_{\delta_0,n,-}=\left\{\omega:m(B_{[-n,n],\omega}^-)\leq e^{-(\eta_0-\delta_0)(2n+1)}\right\}
+    \Omega_{\delta_0,n,-}=\left\{\omega:m(B_{[-n,n],\omega}^-)\leq e^{-(\eta_0-\delta_0)(2n+1)}\right\},
     \]
 
-  By Tchebyshev,
+  We have Tchebyshev,
   \[
-      P(\Omega_{\delta_0,n,\pm}^c)
+      \mathbb{P}(\Omega_{\delta_0,n,\pm}^c)
       % &\leq e^{(\eta_0-\delta_0)n}\int_{\Omega} m(B_{[n+1,3n+1],\omega})dP\omega\\
       % &=    e^{(\eta_0-\delta_0)n}\int_I P(B_{[n+1,3n+1],E})dx\\
       % &\leq e^{(\eta_0-\delta_0)n}m(I)e^{-\eta_0(2n+1)}\\
-      \leq m(\sigma)e^{-\delta_0(2n+1)}
+      \leq m(\sigma)e^{-\delta_0(2n+1)}.
   \]
 By Borel-Cantelli lemma, we get for $a.e.~\omega$,
 \[
@@ -126,17 +126,24 @@ By Borel-Cantelli lemma, we get for $a.e.~\omega$,
 \]
 for $n>N_1(\omega)$.
 \end{proof}
-
-\begin{thm}[Craig-Simon]
+\begin{remark}\label{N1}
+  Note that we can actually shift the operator and use center point $l$ instead of $0$. Then we will get $\Omega_1(l)$ instead of $\Omega_1$, $N_1(l,\omega)$ instead of $N_1(\omega)$. And if we pick $N_1(l,\omega)$ in the theorem as the smallest interger satisfying the conclusion, we can estimate when will $N_1(l,\omega)\leq \ln^2 |l|$, which is very useful in the proof for dynamical localization in section 6.
+  In fact, $\mathbb{P}\{\omega: N_1(l,\omega)>\ln^2 |l|\}\leq C' e^{-\delta_0(2|\ln^2|l|+1)}$, By Borel-Cantelli, for $a.e.\omega$,(We denote this set as $\Omega_{N_1}$,) there exists $L_1(\omega)$, such that for any $|l|>L_1(\omega)$, $N_1(l,\omega)\leq \ln^2|l|$.
+\end{remark}
+The next results follows from \cite{craig1983subharmonicity}:
+\begin{thm}[Craig-Simon]\label{CS}
   For a.e.$\omega$(denote as $\Omega_2$), for all $E$, we have
-  \[
-    \begin{aligned}
-      &\max\{\varlimsup_{n\to\infty} \frac{1}{n+1} \log\Vert T_{[-n,0],E,\omega}\Vert, \varlimsup_{n\to\infty} \frac{1}{n+1} \log\Vert T_{[0,n],E,\omega}\Vert\}\leq\gamma(E)\\
-      &\max\{\varlimsup_{n\to\infty} \frac{1}{n+1}\log\Vert T_{[n+1,2n+1],E,\omega}\Vert, \varlimsup_{n\to\infty} \frac{1}{n+1} \log\Vert T_{[2n+1,3n+1],E,\omega}\Vert\}\leq\gamma(E)
-      \end{aligned}
-    % \end{aligned}
-  \]
+  \begin{equation}\label{C}
+    % \begin{aligned}
+      \max\left\{\varlimsup_{n\to\infty} \frac{ \log\Vert T_{[-n,0],E,\omega}\Vert}{n+1}, \varlimsup_{n\to\infty} \frac{\log\Vert T_{[0,n],E,\omega}\Vert}{n+1}\right\}\leq\gamma(E)
+  \end{equation}
+  \begin{equation}\label{D}
+    \max\left\{\varlimsup_{n\to\infty} \frac{\log\Vert T_{[n+1,2n+1],E,\omega}\Vert}{n+1}, \varlimsup_{n\to\infty} \frac{\log\Vert T_{[2n+1,3n+1],E,\omega}\Vert}{n+1}\right\}\leq\gamma(E)
+  \end{equation}
 \end{thm}
+\begin{remark}
+  \eqref{C} is a direct reformulation of Craig-Simon, while \eqref{D} follows by exactly the same proof.
+\end{remark}
 \begin{cor}\label{omega2}
   for every $ \omega\in\Omega_2$, for every $E$, there exists $N_2=N_2(\omega,E)$, such that for every $ n>N_2$,
 \[
@@ -165,14 +172,13 @@ for $n>N_1(\omega)$.
 %     \item $\varlimsup_{n\to\infty} \frac{1}{n+1} \log\Vert T_{[n+1,2n+1],E,\omega}\Vert$ is submean
 %   \end{enumerate}
 % \end{proof}
-\begin{thm}\label{omega3}
-   Let $\epsilon>0,K>1$, For a.e.$\omega$(denote as $\Omega_3=\Omega_3(\epsilon,K)$), there exists $ N_3=N_3(\omega)$, for every $ n>N_3$, for every $ E_{j,(\omega_{n+1},\cdots,\omega_{3n+1})}$, for every $ y_1,y_2$ satisfying $-n\leq y_1\leq y_2\leq n$,  $\abs{-n-y_1}\geq\frac{n}{K}$, and $\abs{n-y_2}\geq\frac{n}{K}$,
+\begin{lemma}\label{omega3}
+   Let $\epsilon>0,K>1$, For a.e.$\omega$(We denote this set as $\Omega_3=\Omega_3(\epsilon,K)$), there exists $ N_3=N_3(\omega)$, so that for every $ n>N_3$, for every $ E_{j,(\omega_{n+1},\cdots,\omega_{3n+1})}$, for every $ y_1,y_2$ satisfying $-n\leq y_1\leq y_2\leq n$,  $\abs{-n-y_1}\geq\frac{n}{K}$, and $\abs{n-y_2}\geq\frac{n}{K}$,
  we have $E_{j,(\omega_{n+1},\cdots,\omega_{3n+1})}\notin B_{[-n,y_1],\epsilon,\omega}\cup B_{[y_2,n],\epsilon,\omega}$.
-\end{thm}
+\end{lemma}
 \begin{remark}
   Note that $\epsilon$ and $K>0$ are not fixed yet, we're going to determine them later in section 4.
 \end{remark}
-
 \begin{proof}
 % In order to use Borel-Cantelli, one need to estimate
 Let $\bar{P}$
@@ -195,6 +201,7 @@ so
 \bar{\mathbb{P}}\leq(2n+1)^3 2e^{-\eta_0(\frac{n}{K}+1)}
 \]
 Thus by Borel-Cantelli, we can get the result.
+
 % where $y_1,y_2$ satisfy assumptions above. Denote it by $\bar{P}$. Consider
 % \[
 %   \begin{aligned}
@@ -240,3 +247,6 @@ Thus by Borel-Cantelli, we can get the result.
 % \]
 % Integrating over  ?
 \end{proof}
+\begin{remark}\label{N3}
+ Similar to remark \ref{N1}, we can get $\Omega_3(l)$, $N_3(l,\omega)$ instead, and get that for $a.e.\omega$, (We denote this set as $\Omega_{N_3}$,)  there exists $L_3(\omega)$, such that for any $|l|>L_3$, $N_3(l,\omega)\leq \ln^2 |l|$.
+\end{remark}

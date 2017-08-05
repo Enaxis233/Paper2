@@ -1,10 +1,6 @@
 \section{general setup}
-We know that
-\begin{equation}\label{sigma}
-\sigma:=\sigma(H_{\omega})=[-2,2]+S\quad a.e.\omega
-\end{equation}
 \begin{definition}
-    We call $E$ a generalized eigenvalue (denote as g.e.), if there exists a nonzero polynomially bounded function $\Psi(n)$ such that $H\Psi=E\Psi$. We call $\Psi(n)$ generalized eigenfunction.
+    We call $E$ a generalized eigenvalue (denote as $g.e.$), if there exists a nonzero polynomially bounded function $\Psi(n)$ such that $H_\omega\Psi=E\Psi$. We call $\Psi(n)$ a generalized eigenfunction.
 \end{definition}
 Since the set of g.e. supports the spectral measure of $H_\omega$, we only need to show:
 \begin{thm}\label{thm1}
@@ -18,11 +14,15 @@ The Green's function defined on $[a,b]$ for $H_\omega$ with energy $E\notin\sigm
   \]
 Note that this can also be expressed as a "$b-a+1$"-dimensional matrix. Denote its $(x,y)$ entry as $G_{[a,b],E,\omega}(x,y)$.
 
-We have
+It is well known that
   \begin{equation}\label{possion}
     \Psi(x)=-G_{[a,b],E,\omega}(x,a)\Psi(a-1)-G_{[a,b],E,\omega}(x,b)\Psi(b+1),\quad x\in[a,b]
   \end{equation}
-%
+and we know that,
+\begin{equation}\label{sigma}
+\sigma:=\sigma(H_{\omega})=[-2,2]+S\quad a.e.\omega
+\end{equation}
+
 % If one can get that, the Green's function near $n$, say, for example on $[n-k,n+k]$, is decaying somehow exponentially in $n$ as $n$ growing, then since $\Psi$ on the  right-hand-side is polynomially bounded, $\Psi(n)$ on the left-hand-side will decay exponentially in $n$, too.
 
 % inspires us to define "regular and singular".
@@ -44,7 +44,7 @@ We have
 
 By \eqref{possion} and definition 2, Theorem  \ref{thm1} follows from
 \begin{thm}\label{thm2}
-  There exists $ \Omega_0$ with $P(\Omega_0)=1$, such that for every $ \tilde{\omega}\in\Omega_0$, for any g.e.$\tilde{E}$ of $H_{\tilde{\omega}}$, there exist $ N=N(\tilde{E},\tilde{\omega}),C=C(\tilde{E})$, for every $ n>N$, $2n,~2n+1$ are $(C,n,\tilde{E},\tilde{\omega})$ regular.
+  There exists $ \Omega_0$ with $\mathbb{P}(\Omega_0)=1$, such that for every $ \tilde{\omega}\in\Omega_0$, for any g.e.$\tilde{E}$ of $H_{\tilde{\omega}}$, there exist $ N=N(\tilde{E},\tilde{\omega}),C=C(\tilde{E})$, for every $ n>N$, $2n,~2n+1$ are $(C,n,\tilde{E},\tilde{\omega})$ regular.
 \end{thm}
 % \begin{remark}
 %   It's similar for even terms. We omit them only because of notation reasons.
@@ -98,13 +98,13 @@ T_{[a,b],E,\omega}=\left(
 \]
 The Lyapunov exponent is given by
   \[
-    \gamma(E)=\lim_{n\to\infty}\frac{1}{n}\int_0^1 \log\Vert T_{[0,n],E,\omega}\Vert dP(\omega)=\lim_{n\rightarrow\infty}\frac{1}{n} \log\Vert T_{[0,n],E,\omega}\Vert, \quad a.e.\omega.
+    \gamma(E)=\lim_{n\to\infty}\frac{1}{n}\int_0^1 \log\Vert T_{[0,n],E,\omega}\Vert d\mathbb{P}(\omega)=\lim_{n\rightarrow\infty}\frac{1}{n} \log\Vert T_{[0,n],E,\omega}\Vert, \quad a.e.\omega.
   \]
 Let $\nu=\inf\limits_{E\in \sigma}\gamma(E)>0$.
 
 We introduce the large deviation theorem here without proof.
 \cite{tsay1999some}
-\begin{lemma}[Large deviation estimates]
+\begin{lemma}[Large deviation estimates]\label{ldt lemma}
   For any $\epsilon>0$, there exists $\eta=\eta(\epsilon)>0$ such that, there exists $N_0=N_0(\epsilon)$, for every $ b-a>N_0$
   \[
   \mu \left\{ \omega:\left\vert \frac{1}{b-a+1} \log\Vert P_{[a,b],E,\omega}\Vert-\gamma(E) \right\vert\geq\epsilon

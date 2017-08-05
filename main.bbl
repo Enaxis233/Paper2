@@ -5,4 +5,15 @@ Jhishen Tsay and 蔡志賢.
 \newblock Some uniform estimates in products of random matrices.
 \newblock {\em Taiwanese Journal of Mathematics}, pages 291--302, 1999.
 
+\bibitem{craig1983subharmonicity}
+Walter Craig, Barry Simon, et~al.
+\newblock Subharmonicity of the lyaponov index.
+\newblock {\em Duke Mathematical Journal}, 50(2):551--560, 1983.
+
+\bibitem{del1996operators}
+Rafael del Rio, Svetlana Jitomirskaya, Yoram Last, and Barry Simon.
+\newblock Operators with singular continuous spectrum, iv. hausdorff
+  dimensions, rank one perturbations, and localization.
+\newblock {\em Journal d'Analyse Math{\'e}matique}, 69(1):153--200, 1996.
+
 \end{thebibliography}

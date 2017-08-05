@@ -1,0 +1,56 @@
+\section{Quantative Craig-Simon}
+We improve the results of Craig-Simon as following:
+\begin{thm}\label{QCS}
+  For fixed $\epsilon_0>0$, for $a.e.\omega$,(We denote this set as $\Omega_2$), there exists $N_2(\omega)$, such that for any $n>N_2(\omega)$, $E\in \sigma$,
+  \[
+  \max\left\{|P_{[0,n],E,\omega}|,|P_{[-n,0],E,\omega}|,|P_{[n+1,2n+1],E,\omega}|,|P_{[2n+1,3n+1],E,\omega}|\right\}\leq e^{(\gamma(E)+3\epsilon_0)(n+1)}
+  \]
+\end{thm}
+
+We begin with an elementary Lemma:
+\begin{lemma}\label{elementary}
+  If $Q(x)$ is a polynomial of order $n$ on and $x_1,\cdots,x_n$ are distributed like:
+  $x_i=\cos$
+\end{lemma}
+\begin{lemma}
+  If $Q(x)$ is a polynomial of order $n$, and $x_1,\cdots,x_n$ are $n$ uniformly distributed points in $[x_1,x_n]$. If $Q(x_i)\leq a$ for any $i=1,\cdots,n$, then $Q(x)\leq an^c$ for some $c>0$ and any $x\in[x_1,x_n]$.
+\end{lemma}
+Now we prove the Theorem \ref{QCS}.
+\begin{proof}
+We know that $\sigma=[-2,2]+S$, with $S\subset\mathbb{R}$, so $\sigma$ is a finite union of closed intervals. Assume we are dealing with one of them, $[0,A]$. By continuity of $\gamma(E)$ on compact set $\sigma$, for $\epsilon_0$, there exists $\delta_0$ such that
+\begin{equation}\label{holder}
+|\gamma(E_x)-\gamma(E_y)|\leq \epsilon_0,\quad \forall |E_x-E_y|\leq \delta_0.
+\end{equation}
+
+Devide the interval $[0,A]$ into length $\delta_0$ sub-intervals. There are $K=[A/\delta_0]+1$ of them. (The last one may be shorter.) Denote them as $I_k$, for $k=1,\cdots, K$. For $I_k$, devide it into $n-1$ equal sub-subintervals with end points $E_{k1,n},\cdots,E_{kn,n}$. Then with any $E_x$, $E_y\in [E_{k1,n},E_{kn,n}]$, $|\gamma(E_x)-\gamma(E_y)|\leq \epsilon_0$.
+
+Since
+\[
+\mathbb{P}\left(\left\{\omega:  \exists i=1,\cdots,n,~s.t.~|P_{[0,n],E_{ki,n},\omega}|\geq e^{(\gamma(E_{ki,n})+\epsilon_0)(n+1)} \right\}\right)\leq ne^{-\eta_0(n+1)},
+\]
+by Borel-Cantelli, for $a.e.\omega$, (We denote this set as $\Omega_{k}$,) there exists $N(k, \omega)$ for $I_k$, such that for all $n>N(k,\omega)$,
+\[
+|P_{[0,n],E_{ki,n},\omega}|\leq e^{(\gamma(E_{ki,n})+\epsilon_0)(n+1)},\quad \forall i=1,\cdots,n.
+\]
+If we denote $\gamma_{k,n}=\inf_{E\in [E_{k1,n},E_{kn,n}]}{\gamma(E)}$, then by \eqref{holder}
+\[
+|P_{[0,n],E_{ki,n},\omega}|\leq e^{(\gamma(E_{ki,n})+\epsilon_0)(n+1)}\leq e^{(\gamma_{k,n}+2\epsilon_0)(n+1)}, \quad \forall i=1,\cdots,n.
+\]
+
+Let $M$ big enough such that, for any $n>M$, $n^c\leq e^{\epsilon_0(n+1)}$. Thus by Lemma \ref{elementary}, for $E\in[E_{k1,n},E_{kn,n}]$, $n>\max\{N(k,\omega),M\}$,
+\[
+|P_{[0,n],E,\omega}|\leq n^ce^{(\gamma_{k,n}+2\epsilon_0)(n+1)}\leq n^ce^{(\gamma(E)+2\epsilon_0)(n+1)}\leq e^{(\gamma(E)+3\epsilon_0)(n+1)}
+\]
+Let $\Omega_2=\bigcap\limits_k \Omega(k)$,  $\tilde{N}(\omega)=\max_k\{N(k,\omega),M\}$, then for any $n>\tilde{N}(\omega)$,
+\[
+|P_{[0,n],E,\omega}|\leq e^{(\gamma(E)+3\epsilon_0)(n+1)},\quad \forall E\in [0,A]
+\]
+
+Use the same methods for $P_{[-n,0],E,\omega}$, $P_{[n+1,2n+1],E,\omega}$, and $P_{[2n+1,3n+1],E,\omega}$. $N_2(\omega)$ being the maximum of $\tilde{N}(\omega)$ for each of them would work for our theorem.
+\end{proof}
+\begin{remark}\label{N2}
+  Similar as remark \ref{N1} and \ref{N3}, we can get $\Omega_2(l)$, $N_2(l,\omega)$ instead. Note $M$ is independent of $l$, and we can then estimate in the same way that, for $a.e.\omega$, (We denote this set as $\Omega_{N_2}$), there exists $L_2=L_2(\omega)$, such that for any $|l|>L_2$, $N_2(l,\omega)\leq \ln^2 |l|$
+\end{remark}
+\begin{remark}
+  For LD implies continuity of $\gamma$.
+\end{remark}

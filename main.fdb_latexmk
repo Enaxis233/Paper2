@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1501628227 "main.aux" "main.bbl" "main" 1501629981
+["bibtex main"] 1501887335 "main.aux" "main.bbl" "main" 1501887416
   "C:/Program Files/MiKTeX 2/bibtex/bst/bibtex/unsrt.bst" 1291868336 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "body/mybib1.bib" 1501452159 1957 d2da3b2ac152d985ec5f33b148917ca0 ""
-  "main.aux" 1501629980 1065 a05e277a764febf638b70ad8b7837916 ""
+  "body/mybib1.bib" 1501728845 2342 03a38b3a12d3e2381c1a6d6c77e3e0df ""
+  "main.aux" 1501887416 1663 e6a6f70506f2766de3522e231931f3da ""
   (generated)
-  "main.bbl"
   "main.blg"
-["pdflatex"] 1501629978 "main.tex" "main.pdf" "main" 1501629981
+  "main.bbl"
+["pdflatex"] 1501887415 "main.tex" "main.pdf" "main" 1501887416
   "C:/Program Files/MiKTeX 2/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX 2/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233955448 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Program Files/MiKTeX 2/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233955454 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -69,15 +69,17 @@
   "C:/Users/Enaxis/AppData/Local/MiKTeX/2.9/fonts/tfm/public/mathabx/mathb8.tfm" 1501204861 1384 000e7b0ca0a0b24ccfa273cf5f0bc6ea ""
   "C:/Users/Enaxis/AppData/Local/MiKTeX/2.9/fonts/tfm/public/mathabx/mathx10.tfm" 1501204863 1520 88530e4e46ef1e4a7103f014512c50d2 ""
   "C:/Users/Enaxis/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1500794152 4059200 70ff877a07a675e402c699873c1f54b6 ""
-  "body/sec1.tex" 1501624578 1343 e05b7a8bad25ba3c17e268214c4d001f ""
-  "body/sec2.tex" 1501629179 7200 1d1c610a2790fb04e5d463f2ffec7017 ""
-  "body/sec3.tex" 1501629490 12862 f10d24af13446179f5daa2dc80a68b95 ""
-  "body/sec4.tex" 1501629972 6500 67b0815625c27400f1e429a27e8f55d5 ""
-  "main.aux" 1501629980 1065 a05e277a764febf638b70ad8b7837916 ""
-  "main.bbl" 1501628228 247 897d709fb9f98c71129a7e05efc3b82d "bibtex main"
-  "main.tex" 1501622075 448 0e048dae5508acfea152193a015b814e ""
-  "settings/settings.tex" 1501452159 1232 86037e4f1381d497276f5cefd370af5d ""
+  "body/sec1.tex" 1501799965 1326 19fb4b5a570302a0c317dc77a2d2535a ""
+  "body/sec2.tex" 1501800371 7264 0b3d0c0fd039ceadc3aa2f2cf093d7af ""
+  "body/sec3.tex" 1501812485 14182 984c3ef1e96a985a3034fb5eba9c4e93 ""
+  "body/sec4.tex" 1501865369 6520 cb50cd1748451590e1981071c23a5235 ""
+  "body/sec5.tex" 1501887355 3589 1b96a31fe2e7adb43093d186c5248719 ""
+  "body/sec6.tex" 1501887399 3833 bad6c2129b016badc49d6ef6c976598f ""
+  "main.aux" 1501887416 1663 e6a6f70506f2766de3522e231931f3da ""
+  "main.bbl" 1501887335 735 c0798dc515353b5a68f3f9893e247691 "bibtex main"
+  "main.tex" 1501803715 486 a5a4c1b408beeeccf7e7570b4ad7204c ""
+  "settings/settings.tex" 1501802548 1237 35efbcdfaf6a4638df33fb6d3c085e78 ""
   (generated)
-  "main.pdf"
   "main.aux"
+  "main.pdf"
   "main.log"

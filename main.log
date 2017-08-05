@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.23)  1 AUG 2017 16:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.23)  4 AUG 2017 15:56
 entering extended mode
 **./main.tex
 (main.tex
@@ -242,10 +242,9 @@ LaTeX Font Info:    Redeclaring math accent \widehat on input line 944.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 946.
 ))
 \c@thm=\count103
-\c@lemma=\count104
-\c@cor=\count105
-\c@definition=\count106
-\c@remark=\count107
+\c@cor=\count104
+\c@definition=\count105
+\c@remark=\count106
 ) (main.aux)
 \openout1 = `main.aux'.
 
@@ -272,18 +271,16 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (body/sec1.tex)
 (body/sec2.tex [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}])
-(body/sec3.tex [2] [3]) (body/sec4.tex
-Overfull \hbox (3.65544pt too wide) in paragraph at lines 36--37
-\OT1/cmr/m/n/10 real ze-ros (eigen-val-ues of $\OML/cmm/m/it/10 H[]$\OT1/cmr/m/
-n/10 ), which are all in $\OML/cmm/m/it/10 B \U/matha/m/n/10  \OML/cmm/m/it/10
- B[]$\OT1/cmr/m/n/10 .
- []
-
-[4]
+(body/sec3.tex [2] [3]) (body/sec4.tex [4]
 Missing character: There is no ï in font cmr7!
 Missing character: There is no ¼ in font cmr7!
 Missing character: There is no Œ in font cmr7!
-) (main.bbl
+) (body/sec5.tex [5]
+Overfull \hbox (7.74626pt too wide) detected at line 7
+[] [] \U/matha/m/n/10 ¤ \OML/cmm/m/it/10 e[]
+ []
+
+[6]) (body/sec6.tex [7]) (main.bbl
 Missing character: There is no è in font cmr8!
 Missing character: There is no ” in font cmr8!
 Missing character: There is no ¡ in font cmr8!
@@ -293,15 +290,15 @@ Missing character: There is no — in font cmr8!
 Missing character: There is no è in font cmr8!
 Missing character: There is no ³ in font cmr8!
 Missing character: There is no ¢ in font cmr8!
-) [5] (main.aux) ) 
+) [8] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 1990 strings out of 493323
- 21248 string characters out of 3139925
- 78224 words of memory out of 3000000
- 5371 multiletter control sequences out of 15000+200000
+ 2007 strings out of 493323
+ 21399 string characters out of 3139925
+ 78297 words of memory out of 3000000
+ 5382 multiletter control sequences out of 15000+200000
  14978 words of font info for 53 fonts, out of 3000000 for 9000
  1302 hyphenation exceptions out of 8191
- 34i,11n,32p,1182b,232s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,7n,32p,1182b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Enaxis\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\pu
 blic\mathabx\dpi600\matha5.pk> <C:\Users\Enaxis\AppData\Local\MiKTeX\2.9\fonts\
 pk\ljfour\public\mathabx\dpi600\mathx10.pk> <C:\Users\Enaxis\AppData\Local\MiKT
@@ -322,9 +319,9 @@ fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2/fonts/type
 sfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2/fonts/type1/public/amsfonts/sym
 bols/msbm7.pfb>
-Output written on main.pdf (5 pages, 206048 bytes).
+Output written on main.pdf (8 pages, 238964 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
+ 175 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
