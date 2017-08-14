@@ -1,6 +1,6 @@
-\section{general setup}
+\section{Preliminaries}
 \begin{definition}
-    We call $E$ a generalized eigenvalue (denote as $g.e.$), if there exists a nonzero polynomially bounded function $\Psi(n)$ such that $H_\omega\Psi=E\Psi$. We call $\Psi(n)$ a generalized eigenfunction.
+    We call $E$ a generalized eigenvalue ($g.e.$), if there exists a nonzero polynomially bounded function $\Psi(n)$ such that $H_\omega\Psi=E\Psi$. We call $\Psi(n)$ a generalized eigenfunction.
 \end{definition}
 Since the set of g.e. supports the spectral measure of $H_\omega$, we only need to show:
 \begin{thm}\label{thm1}
@@ -18,9 +18,9 @@ It is well known that
   \begin{equation}\label{possion}
     \Psi(x)=-G_{[a,b],E,\omega}(x,a)\Psi(a-1)-G_{[a,b],E,\omega}(x,b)\Psi(b+1),\quad x\in[a,b]
   \end{equation}
-and we know that,
+and we have
 \begin{equation}\label{sigma}
-\sigma:=\sigma(H_{\omega})=[-2,2]+S\quad a.e.\omega
+\sigma:=\sigma(H_{\omega})=[-2,2]+S\quad a.e.\omega.
 \end{equation}
 
 % If one can get that, the Green's function near $n$, say, for example on $[n-k,n+k]$, is decaying somehow exponentially in $n$ as $n$ growing, then since $\Psi$ on the  right-hand-side is polynomially bounded, $\Psi(n)$ on the left-hand-side will decay exponentially in $n$, too.
@@ -65,7 +65,7 @@ Some other basic settings are below. Denote
 \[
   P_{[a,b],E,\omega}=det(H_{[a,b],E,\omega}-E)
 \]
-If $a=b$, let $  P_{[a,b],E,\omega}=1$, then
+If $a=b$, let $  P_{[a,b],E,\omega}=1$. Then
 \begin{equation}\label{A}
   \left\vert G_{[a,b],E,\omega}(x,y)\right\vert=\frac{\left\vert P_{[a,x-1],E,\omega}P_{[y+1,b],E,\omega}\right\vert}{\left\vert P_{[a,b],E,\omega}\right\vert},\quad x\leq y
 \end{equation}
@@ -135,3 +135,49 @@ We introduce the large deviation theorem here without proof.
 %   m(B_{[-n,n],\omega}^{-})\leq Ce^{-(\eta-\delta)(2n+1)}
 %   \]
 % \end{thm}
+
+Finally, we provide an estimates on polynomials interpolation.
+%
+% We begin with an elementary Lemma:
+\begin{lemma}\label{elementary}
+  If $Q(x)$ is a polynomial of degree $n-1$ on and $x_1,\cdots,x_n$ are distributed as
+  $x_i=\cos{\frac{2\pi(i+\theta)}{n}}$, if $Q(x_i)\leq a^n, \forall i$, then $Q(x)\leq Cna^n$, where $C$ is a constant, $x\in[x_1,x_n]$.
+\end{lemma}
+\begin{proof}
+  By Lagrange Interpolation, we have
+  \begin{equation}
+    Q(x)=\sum_{i=1}^{n}Q(x_i)\prod_{j\neq i}\frac{x-x_j}{x_i-x_j}
+  \end{equation}
+  Note that
+  \[
+  \sum_{j\neq i}\ln|x_i-x_j|=\sum_{j\neq i}\left\{\ln\left|\sin\frac{\pi(i+j+2\theta)}{n}\right|+\ln\left|\sin\frac{\pi(i-j)}{n}\right|+\ln 2\right\}= A+B+C
+  \]
+  For $B$, one use lemma 9.6 from \cite{avila2009ten} and get
+  \[
+    B\geq \ln n+\ln (2/\pi)-(n-1)\ln 2.
+  \]
+  For $A$, if $j=j_0$ reach the minimum term of $\ln|\sin\frac{\pi(i+j+2\theta)}{n}|$, then
+  \[
+    A\geq \ln n+\ln (2/\pi) -(n-1)\ln 2-\ln\left|\sin\frac{\pi(2i+2\theta)}{n}\right|+\ln\left|\sin\frac{\pi(i+j_0+2\theta)}{n}\right|
+  \]
+  Choose $0<\theta<1/2$, then
+  \[
+  \frac{|\sin\frac{\pi(2i+2\theta)}{n}|}{|\sin\frac{\pi(i+j_0+2\theta)}{n}|}
+  = \frac{|\sin\frac{\pi(2i+2\theta)}{n}|}{|\sin\frac{\pi\cdot 2\theta}{n}|}\leq \frac{1}{|\sin\frac{\pi\cdot 2\theta}{n}|}= O(n)
+  \]
+  So
+  \[
+    \sum_{j\neq i}\ln|x_i-x_j|\geq -(n-1)\ln 2+\ln n+C
+  \]
+  Write $x=\cos\frac{2\pi a}{n}$ and use the other half result of lemma 9.6 from \cite{avila2009ten}, one get
+  \[
+    \sum_{j\neq i}\ln |x-x_j|\leq -(n-1)\ln 2+ 2\ln n+ C'
+  \]
+  So
+  \[
+  \prod_{j\neq i}\frac{x-x_j}{x_i-x_j}\leq Cn
+  \]
+  \[
+  Q(x)\leq Cna^n
+  \]
+\end{proof}
