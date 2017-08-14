@@ -5,10 +5,21 @@ Jhishen Tsay and 蔡志賢.
 \newblock Some uniform estimates in products of random matrices.
 \newblock {\em Taiwanese Journal of Mathematics}, pages 291--302, 1999.
 
+\bibitem{avila2009ten}
+Artur Avila and Svetlana Jitomirskaya.
+\newblock The ten martini problem.
+\newblock {\em Annals of Mathematics}, pages 303--342, 2009.
+
 \bibitem{craig1983subharmonicity}
 Walter Craig, Barry Simon, et~al.
 \newblock Subharmonicity of the lyaponov index.
 \newblock {\em Duke Mathematical Journal}, 50(2):551--560, 1983.
+
+\bibitem{duarte2016lyapunov}
+Pedro Duarte and Silvius Klein.
+\newblock {\em Lyapunov exponents of linear cocycles: continuity via large
+  deviations}, volume~3.
+\newblock Springer, 2016.
 
 \bibitem{del1996operators}
 Rafael del Rio, Svetlana Jitomirskaya, Yoram Last, and Barry Simon.

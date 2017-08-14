@@ -1,28 +1,48 @@
-\section{Quantative Craig-Simon}
-We improve the results of Craig-Simon as following:
+\section{Quantitative Craig-Simon}
+We improve the results of Craig-Simon \cite{craig1983subharmonicity}, on the one hand, to a quantitative sense such that it allow us to estimates $N$, while on the other hand, to be derived only from "large deviation type" (LDT) models. So in fact, we can generalize \cite{craig1983subharmonicity} to a larger variety of models. In this section, we are not limited in the Anderson Model, on the contrary, we consider
+\[
+ H_\omega u(n)=u(n+1)+u(n-1)+V(\omega)u(n)
+\]
+where the potential $V$ is an ergodic process in the sense that the index $\omega$ lies in a probability measure space $(\Omega,\mu)$, which supports a group $\tau_x$ of measure preserving ergodic transformations with $V_\omega(x+y)=V_{\tau_y\omega}(x)$, where $\sup\{|V_\omega(x)|,~x\in \mathbb{Z},\omega\in\Omega\}<\infty$.
+\begin{definition}
+  We say $H_\omega$ satisfies a uniform-LDT condition if for every $\epsilon>0$, there are $\delta>0$, and $M>0$, $c>0$, such that if $\Vert S-T\Vert\leq \delta$, then
+  \[
+  \mu\left\{\omega\in \Omega:|\frac{1}{n}\log\Vert S_{[0,n],\omega}\Vert-\gamma_n(S)|>\epsilon\right\}\leq Me^{-cn}.
+  \]
+  where $\gamma_n(S)=\int_{\Omega}\frac{1}{n}\log\Vert S_{[0,n]}\Vert d\mu$.
+\end{definition}
+By \cite{duarte2016lyapunov}, for those operators that satisfy the uniform-LDT condition, we can conclude the continuity of Lvapunov exponent.
+
+\begin{thm}
+  For those operators $H_\omega$ that satisfies the unifotm-LDT condition, and every $\gamma(E)$ is uniformly $L_p$ bounded, the Lyapunov exponent $\gamma(E)$ is continuous.
+\end{thm}
+
+
 \begin{thm}\label{QCS}
-  For fixed $\epsilon_0>0$, for $a.e.\omega$,(We denote this set as $\Omega_2$), there exists $N_2(\omega)$, such that for any $n>N_2(\omega)$, $E\in \sigma$,
+  For $H_\omega$ satisfying the uniform-LDT condition, for fixed $\epsilon_0>0$, for a.e. $\omega$ (we denote this set as $\Omega_2=\Omega_2(\epsilon_0)$), there exists $N_2(\omega)$, such that for any $n>N_2(\omega)$, $E\in \sigma$,
+  \[
+    |P_{[0,n],E,\omega}|\leq e^{(\gamma(E)+\epsilon_0)(n+1)}
+  \]
+\end{thm}
+\begin{remark}
+  It's obvious that we can in fact get the result:
   \[
   \max\left\{|P_{[0,n],E,\omega}|,|P_{[-n,0],E,\omega}|,|P_{[n+1,2n+1],E,\omega}|,|P_{[2n+1,3n+1],E,\omega}|\right\}\leq e^{(\gamma(E)+3\epsilon_0)(n+1)}
   \]
-\end{thm}
+  for replacing Theorem 3.3 with a quatitative version.
+\end{remark}
 
-We begin with an elementary Lemma:
-\begin{lemma}\label{elementary}
-  If $Q(x)$ is a polynomial of order $n$ on and $x_1,\cdots,x_n$ are distributed like:
-  $x_i=\cos$
-\end{lemma}
-\begin{lemma}
-  If $Q(x)$ is a polynomial of order $n$, and $x_1,\cdots,x_n$ are $n$ uniformly distributed points in $[x_1,x_n]$. If $Q(x_i)\leq a$ for any $i=1,\cdots,n$, then $Q(x)\leq an^c$ for some $c>0$ and any $x\in[x_1,x_n]$.
-\end{lemma}
+% \begin{lemma}
+%   If $Q(x)$ is a polynomial of degree $n$, and $x_1,\cdots,x_n$ are $n$ uniformly distributed points in $[x_1,x_n]$. If $Q(x_i)\leq a$ for any $i=1,\cdots,n$, then $Q(x)\leq an^c$ for some $c>0$ and any $x\in[x_1,x_n]$.
+% \end{lemma}
 Now we prove the Theorem \ref{QCS}.
 \begin{proof}
-We know that $\sigma=[-2,2]+S$, with $S\subset\mathbb{R}$, so $\sigma$ is a finite union of closed intervals. Assume we are dealing with one of them, $[0,A]$. By continuity of $\gamma(E)$ on compact set $\sigma$, for $\epsilon_0$, there exists $\delta_0$ such that
+We know that $\sigma$ is compact, so by \eqref{sigma}, $\sigma$ is a finite union of closed intervals. Assume we are dealing with one of them, $[a,a+A]$. By continuity, so uniformly continuity of $\gamma(E)$ on compact set $\sigma$, for $\epsilon_0$, there exists $\delta_0$ such that
 \begin{equation}\label{holder}
 |\gamma(E_x)-\gamma(E_y)|\leq \epsilon_0,\quad \forall |E_x-E_y|\leq \delta_0.
 \end{equation}
 
-Devide the interval $[0,A]$ into length $\delta_0$ sub-intervals. There are $K=[A/\delta_0]+1$ of them. (The last one may be shorter.) Denote them as $I_k$, for $k=1,\cdots, K$. For $I_k$, devide it into $n-1$ equal sub-subintervals with end points $E_{k1,n},\cdots,E_{kn,n}$. Then with any $E_x$, $E_y\in [E_{k1,n},E_{kn,n}]$, $|\gamma(E_x)-\gamma(E_y)|\leq \epsilon_0$.
+Divide the interval $[a,a+A]$ into length $\delta_0$ sub-intervals. There are $K=[A/\delta_0]+1$ of them (the last one may be shorter). Denote them as $I_k$, for $k=1,\cdots, K$. For $I_k$, divide it into $n-1$ equal sub-subintervals with end points $E_{k1,n},\cdots,E_{kn,n}$. Then with any $E_x$, $E_y\in [E_{k1,n},E_{kn,n}]$, $|\gamma(E_x)-\gamma(E_y)|\leq \epsilon_0$.
 
 Since
 \[

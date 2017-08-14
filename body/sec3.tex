@@ -96,7 +96,7 @@ Now we will use the following three lemmas to find the proper $\Omega_0$ for The
 \end{lemma}
 
 \begin{proof}
-  By \eqref{ldt},
+By \eqref{ldt},
   % for every $ E\in I=\sigma$,which is compact, $P(B_{[n+1,3n+1],E}^-)\leq e^{-\eta_0(2n+1)}$ and $P(B_{[-n,n],E}^-)\leq e^{-\eta_0(2n+1)}$
 \[
 m\times\mathbb{P}(B_{[n+1,3n+1]}^-)\leq m(\sigma)e^{-\eta_0(2n+1)}
@@ -104,22 +104,21 @@ m\times\mathbb{P}(B_{[n+1,3n+1]}^-)\leq m(\sigma)e^{-\eta_0(2n+1)}
 \[
 m\times\mathbb{P}(B_{[-n,n]}^-)\leq m(\sigma)e^{-\eta_0(2n+1)}
 \]
-  If we denote
+If we denote
     \[
       \Omega_{\delta_0,n,+}=\left\{\omega:m(B_{[n+1,3n+1],\omega}^-)\leq e^{-(\eta_0-\delta_0)(2n+1)}\right\}
     \]
     \[
     \Omega_{\delta_0,n,-}=\left\{\omega:m(B_{[-n,n],\omega}^-)\leq e^{-(\eta_0-\delta_0)(2n+1)}\right\},
     \]
-
-  We have Tchebyshev,
-  \[
+We have by Tchebyshev,
+\begin{equation}\label{A5}
       \mathbb{P}(\Omega_{\delta_0,n,\pm}^c)
       % &\leq e^{(\eta_0-\delta_0)n}\int_{\Omega} m(B_{[n+1,3n+1],\omega})dP\omega\\
       % &=    e^{(\eta_0-\delta_0)n}\int_I P(B_{[n+1,3n+1],E})dx\\
       % &\leq e^{(\eta_0-\delta_0)n}m(I)e^{-\eta_0(2n+1)}\\
       \leq m(\sigma)e^{-\delta_0(2n+1)}.
-  \]
+\end{equation}
 By Borel-Cantelli lemma, we get for $a.e.~\omega$,
 \[
 \max\{m(B_{[n+1,3n+1],\omega}^-),m(B_{[-n,n],\omega}^-)\}\leq e^{-(\eta_0-\delta_0)(2n+1)},
@@ -130,9 +129,9 @@ for $n>N_1(\omega)$.
   Note that we can actually shift the operator and use center point $l$ instead of $0$. Then we will get $\Omega_1(l)$ instead of $\Omega_1$, $N_1(l,\omega)$ instead of $N_1(\omega)$. And if we pick $N_1(l,\omega)$ in the theorem as the smallest interger satisfying the conclusion, we can estimate when will $N_1(l,\omega)\leq \ln^2 |l|$, which is very useful in the proof for dynamical localization in section 6.
   In fact, $\mathbb{P}\{\omega: N_1(l,\omega)>\ln^2 |l|\}\leq C' e^{-\delta_0(2|\ln^2|l|+1)}$, By Borel-Cantelli, for $a.e.\omega$,(We denote this set as $\Omega_{N_1}$,) there exists $L_1(\omega)$, such that for any $|l|>L_1(\omega)$, $N_1(l,\omega)\leq \ln^2|l|$.
 \end{remark}
-The next results follows from \cite{craig1983subharmonicity}:
-\begin{thm}[Craig-Simon]\label{CS}
-  For a.e.$\omega$(denote as $\Omega_2$), for all $E$, we have
+The next results follows from :
+\begin{thm}[Craig-Simon \cite{craig1983subharmonicity}]\label{CS}
+  For a.e. $\omega$(we denote this set as $\Omega_2$), for all $E$, we have
   \begin{equation}\label{C}
     % \begin{aligned}
       \max\left\{\varlimsup_{n\to\infty} \frac{ \log\Vert T_{[-n,0],E,\omega}\Vert}{n+1}, \varlimsup_{n\to\infty} \frac{\log\Vert T_{[0,n],E,\omega}\Vert}{n+1}\right\}\leq\gamma(E)
@@ -142,13 +141,13 @@ The next results follows from \cite{craig1983subharmonicity}:
   \end{equation}
 \end{thm}
 \begin{remark}
-  \eqref{C} is a direct reformulation of Craig-Simon, while \eqref{D} follows by exactly the same proof.
+  \eqref{C} is a direct reformulation of the result of \cite{craig1983subharmonicity}, while \eqref{D} follows by exactly the same proof.
 \end{remark}
 \begin{cor}\label{omega2}
-  for every $ \omega\in\Omega_2$, for every $E$, there exists $N_2=N_2(\omega,E)$, such that for every $ n>N_2$,
+  For every $ \omega\in\Omega_2$, for every $E$, there exists $N_2=N_2(\omega,E)$, such that for every $ n>N_2$,
 \[
 \begin{aligned}
-&\max\{\Vert T_{[-n,0],E,\omega}\Vert, \Vert T_{[0,n],E,\omega}\Vert\}<e^{(\gamma(E)+\epsilon)(n+1)}\\ &\max\{T_{[n+1,2n+1],E,\omega}\Vert, \Vert T_{[2n+1,3n+1],E,\omega}\Vert\}<e^{(\gamma(E)+\epsilon)(n+1)}
+&\max\{\Vert T_{[-n,0],E,\omega}\Vert, \Vert T_{[0,n],E,\omega}\Vert\}<e^{(\gamma(E)+\epsilon)(n+1)}\\ &\max\{\Vert T_{[n+1,2n+1],E,\omega}\Vert, \Vert T_{[2n+1,3n+1],E,\omega}\Vert\}<e^{(\gamma(E)+\epsilon)(n+1)}
 \end{aligned}
 \]
 
@@ -173,7 +172,7 @@ The next results follows from \cite{craig1983subharmonicity}:
 %   \end{enumerate}
 % \end{proof}
 \begin{lemma}\label{omega3}
-   Let $\epsilon>0,K>1$, For a.e.$\omega$(We denote this set as $\Omega_3=\Omega_3(\epsilon,K)$), there exists $ N_3=N_3(\omega)$, so that for every $ n>N_3$, for every $ E_{j,(\omega_{n+1},\cdots,\omega_{3n+1})}$, for every $ y_1,y_2$ satisfying $-n\leq y_1\leq y_2\leq n$,  $\abs{-n-y_1}\geq\frac{n}{K}$, and $\abs{n-y_2}\geq\frac{n}{K}$,
+   Let $\epsilon>0,K>1$, For a.e. $\omega$(We denote this set as $\Omega_3=\Omega_3(\epsilon,K)$), there exists $ N_3=N_3(\omega)$, so that for every $ n>N_3$, for every $ E_{j,(\omega_{n+1},\cdots,\omega_{3n+1})}$, for every $ y_1,y_2$ satisfying $-n\leq y_1\leq y_2\leq n$,  $\abs{-n-y_1}\geq\frac{n}{K}$, and $\abs{n-y_2}\geq\frac{n}{K}$,
  we have $E_{j,(\omega_{n+1},\cdots,\omega_{3n+1})}\notin B_{[-n,y_1],\epsilon,\omega}\cup B_{[y_2,n],\epsilon,\omega}$.
 \end{lemma}
 \begin{remark}
@@ -197,10 +196,10 @@ Applying to $[a,b]=[-n,y_1]$ or $[y_2,n]$, $[c,d]=[n+1,3n+1]$ and integrating ov
 \mathbb{P}(B_{[-n,y_1],\epsilon,E_{j,(\omega_{n+1},\cdots,\omega_{3n+1})}}\cup B_{[y_2,n],\epsilon,E_{j,(\omega_{n+1},\cdots,\omega_{3n+1})}}) \leq 2e^{-\eta_0(\frac{n}{K}+1)},
 \]
 so
-\[
+\begin{equation}\label{B5}
 \bar{\mathbb{P}}\leq(2n+1)^3 2e^{-\eta_0(\frac{n}{K}+1)}
-\]
-Thus by Borel-Cantelli, we can get the result.
+\end{equation}
+Thus by Borel-Cantelli, we get the result.
 
 % where $y_1,y_2$ satisfy assumptions above. Denote it by $\bar{P}$. Consider
 % \[
